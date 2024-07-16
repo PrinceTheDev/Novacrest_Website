@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale.0">
+    <title>Novacrest Hospital- New heights in holistic care</title>
+    <meta name="description" content="{% block meta_description %}Novacrest Hospital provide top-notch in-patient and out-patient mental health services, inncluding rehabilitation and counseling. Book an appointment today. {% endblock %}"></meta>
+    <meta name="keyword" content="{% block meta_keywords %}mental health, rehabilitation, therapy, psychiatry, counseling, drug abuse, Novacrest Hospital, mental health hospital, best hospital, best mental health hospital in Abuja, rehab{% endblock %}"></meta>
+    <meta name="author" content="Novarcrest Hospital"></meta>
+  {% block extra_meta %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MKZ5NVL0Z">
+    </script>
+    <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());In template /root/Novacrest_Hospital/core/templates/core/home.html, error at line 32
+
+Reverse for 'about' not found. 'about' is not a valid view function or pattern name.
+
+          gtag('config', 'G-1MKZ5NVL0Z');
+    </script>
+    {% endblock %}
+
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+        <img alt="Novacrest Hospital" class="img-fluid" src="{% static 'images/home/novalogo.jpeg' %}" style="height: 30px;  "/>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about_us' %}">About Us</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'blog' %}">Blog</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+            <li><a href="{% url 'book_appointment' %}">Book Appointment</a></li>
+          </ul>
+        </nav>
+    </header>
+
+<!--New Section -->
+    <div class="banner">
+      <img src={% static 'images/banner.jpg' %} alt="Welcome to Novacrest Hospital" class="banner-image">
+      <div class="banner-content">
+          <h1>Welcome to Novacrest Hospital</h1>
+          <p>Your Health is Our No 1. PRIORITY</p>
+          <a href="{% url 'services' %}" class="banner-button">Explore Our Services></a>
+      </div>
+    </div>
+
+</body>
+
+<footer>
+
+</footer>
+</html>
