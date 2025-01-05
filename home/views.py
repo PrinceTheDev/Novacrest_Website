@@ -1,8 +1,8 @@
-from django.shortcuts import render
 from django.http import HttpResponse
-
+from django.template import loader
 
 def home(request):
-    return HttpResponse('Welcome to Novacrest Hospital')
+    template = loader.get_template('home/home.html')
+    return HttpResponse(template.render())
 
 
