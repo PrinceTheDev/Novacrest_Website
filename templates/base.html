@@ -23,13 +23,77 @@
 </head>
 
 <body>
+    <!-- Top of the page -->
+    <div class="container row">
+        <div class="col-3">
+            <div class="logo">
+                {% comment %} <img src="{% static 'home/images/logo.png' %}" alt="Novacrest Logo" class="img-fluid"> {% endcomment %}
+            </div>
+        </div>
+        <div class="col-3">
+           <div class="Emergency">
+                <i class="bi bi-telephone-x-fill"></i>
+               <p>Emergency</p>
+               <p>0800 000 0000</p>
+        </div>
+        <div class="col-3">
+            <div class="Work-Hours">
+                 <i class="bi bi-hourglass-split"></i>
+                <p>Work Hour</p>
+                <p>Round The Clock</p>
+         </div>
+         <div class="col-3">
+            <div class="Location">
+                 <i class="bi bi-geo-alt-fill"></i>
+                <p>Location</p>
+                <p>Abuja, Nigeria</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- End of top page -->
+
+    {% comment %} <nav class="navbar navbar-expand-sm navbar-light b">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">Novacrest</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'services' %}">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'team' %}">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'news' %}">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'appoitnment' %}">Appointment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> {% endcomment %}
     {% block content %}
     
     {% endblock  %}
       
-  <footer>
+  {% comment %} <footer>
         <p>&copy; 2024</p>
-  </footer>
+  </footer> {% endcomment %}
 </body>
 
 </html
