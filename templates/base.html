@@ -4,22 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="novacrest hospital,psychiatrist, mental disorder, mental illness, drug abuse, rehab centers,therapist, therapy, counselling, rehab, mental, disorder, 
-                distinctive, psychology, abuja, mental health, hospital, rehabilitation, nova, crest, psychiatry, best rehab in Abuja, best rehab in Nigeria, best mental hospital in Nigeria, 
-                best psychiatry hospital in Nigeria, top mental hospitals abuja, best rehabilitation centre in Abuja, best mental hospital in Abuja, best psychiatry hospital in Abuja">
-    <meta name="keywords" content="novacrest hospital,psychiatrist, mental disorder, mental illness, drug abuse, rehab centers,therapist, therapy, counselling, rehab, mental, disorder, 
-                distinctive, psychology, abuja, mental health, hospital, rehabilitation, nova, crest, psychiatry, best rehab in Abuja, best rehab in Nigeria, best mental hospital in Nigeria, 
-                best psychiatry hospital in Nigeria, top mental hospitals abuja, best rehabilitation centre in Abuja, best mental hospital in Abuja, best psychiatry hospital in Abuja, mental health">
+    <meta name="description" content="Novacrest Hospital provides expert care for mental health disorders, addiction treatment, therapy, rehabilitation, and psychiatric services in Abuja, Nigeria. Offering holistic care, counseling, and personalized mental health treatment plans.">
+    <meta name="keywords" content=" mental health, psychiatry, rehabilitation, counseling, therapy, Novacrest Hospital, Abuja, Nigeria, rehab centers, addiction treatment
+                best psychiatry hospital in Nigeria, best rehabilitation centre in Abuja, best mental hospital in Abuja, best psychiatry hospital in Abuja">
     <meta name="author" content="Novacrest">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <title>Novacrest Hospital - New Heights in Holistic Care</title>
-    {% comment %} {% load static %}
-    <link rel="stylesheet" href="{% static 'home/home.css' %}"> {% endcomment %}
-    {% comment %} <script src="home/templates/home/home.js"></script> {% endcomment %}
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://novacresthospital.org.ng/">
+
+    {% comment %} <link rel="icon" href="{% static 'home/images/favicon.png' %}" type="image/png"> {% endcomment %}
+
+    <title>Novacrest Hospital | Leading Mental Health Care In Abuja</title>
+
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+    <script src="{% static 'js/script.js' %}"></script> 
+    
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MKZ5NVL0Z"> </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-1MKZ5NVL0Z');
+    </script>
+    <!-- End of Google tag (gtag.js) -->
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Hospital",
+          "name": "Novacrest Hospital",
+          "description": "Expert mental health services, including counseling, rehabilitation, and therapy in Abuja, Nigeria.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Abuja",
+            "addressCountry": "Nigeria"
+          },
+          "url": "https://novacresthospital.org.ng"
+        }
+        </script>
+
+
 </head>
 
 <body>
@@ -28,6 +64,7 @@
         <div class="col-3">
             <div class="logo">
                 {% comment %} <img src="{% static 'home/images/logo.png' %}" alt="Novacrest Logo" class="img-fluid"> {% endcomment %}
+                <h1> NOVACREST HOSPITAL</h1>
             </div>
         </div>
         <div class="col-3">
@@ -90,10 +127,10 @@
     {% block content %}
     
     {% endblock  %}
-      
-  {% comment %} <footer>
-        <p>&copy; 2024</p>
-  </footer> {% endcomment %}
+    
+    {% block footer %}
+    
+    {% endblock  %}
 </body>
 
 </html
