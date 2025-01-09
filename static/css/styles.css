@@ -1,3 +1,62 @@
-body {
-    
+html, body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    flex: 3;
+    font-size: 1.5em;
+    padding-left: 100px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-right: 100px;
+    gap: 20px;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    font-size: 2rem;
+    color: #000;
+}
+
+.text {
+    text-align: right;
+}
+
+.text p {
+    margin: 0;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.text a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.text a:hover {
+    text-decoration: underline;
 }

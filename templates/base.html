@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +12,7 @@
     <meta name="author" content="Novacrest">
     
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,8 +24,8 @@
 
     <title>Novacrest Hospital | Leading Mental Health Care In Abuja</title>
 
-     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+    
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <script src="{% static 'js/script.js' %}"></script> 
     
     {% load bootstrap5 %}
@@ -60,34 +63,39 @@
 
 <body>
     <!-- Top of the page -->
-    <div class="container row">
-        <div class="col-3">
-            <div class="logo">
-                {% comment %} <img src="{% static 'home/images/logo.png' %}" alt="Novacrest Logo" class="img-fluid"> {% endcomment %}
-                <h1> NOVACREST HOSPITAL</h1>
-            </div>
-        </div>
-        <div class="col-3">
-           <div class="Emergency">
-                <i class="bi bi-telephone-x-fill"></i>
-               <p>Emergency</p>
-               <p>0800 000 0000</p>
-        </div>
-        <div class="col-3">
-            <div class="Work-Hours">
-                 <i class="bi bi-hourglass-split"></i>
-                <p>Work Hour</p>
-                <p>Round The Clock</p>
-         </div>
-         <div class="col-3">
-            <div class="Location">
-                 <i class="bi bi-geo-alt-fill"></i>
-                <p>Location</p>
-                <p>Abuja, Nigeria</p>
-            </div>
+    <div class="container-fluid header">
+        <div class="logo">
+            {% comment %} <a href="{% url 'home' %}">
+                <img src="{% static '/images/logo.png' %}" alt="Novacrest Hospital Logo">
+            </a> {% endcomment %}
+            <h1>NOVACREST</h1>
         </div>
 
+        <div class="info">
+            <div class="icon-text">
+                <i class="bi bi-telephone-inbound icon"></i>
+                <div class="text">
+                    <p>EMERGENCY</p>
+                    <p><a href="tel:+2348035318274">(+234) 803 531 8274</a></p>
+                </div>
+            </div>
+            <div class="icon-text">
+                <i class="bi bi-calendar3 icon"></i>
+                <div class="text">
+                    <p>WORK HOURS</p>
+                    <p>Round The Clock</p>
+                </div>
+            </div>
+            <div class="icon-text">
+                <i class="bi bi-geo-alt icon"></i>
+                <div class="text">
+                    <p>LOCATION</p>
+                    <p>Click to view maps</p>
+                </div>
+            </div>
+        </div>
     </div>
+
     <!-- End of top page -->
 
     {% comment %} <nav class="navbar navbar-expand-sm navbar-light b">
