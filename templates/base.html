@@ -98,15 +98,15 @@
 
     <!-- End of top page -->
 
-    <nav class="navbar navbar-expand-sm navbar-light b">
+    <nav class="navbar navbar-expand-sm navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}">Novacrest</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'home' %}">Home</a>
                     </li>
@@ -123,15 +123,18 @@
                         <a class="nav-link" href="{% url 'news' %}">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'appointment' %}">Appointment</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                     </li>
                 </ul>
+                
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-search icon me-3"></i>
+                    <a class="btn btn-outline-light" href="{% url 'appointment' %}">Make an Appointment</a>
+                </div>
             </div>
         </div>
     </nav>
+
     {% block content %}
     
     {% endblock  %}

@@ -6,7 +6,7 @@ html, body {
     padding: 0;
 }
 
-
+/* Header */
 
 .header {
     display: flex;
@@ -60,3 +60,58 @@ html, body {
 .text a:hover {
     text-decoration: underline;
 }
+
+/* End of Header */
+
+/* NavBar */
+
+.navbar {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar .nav-link {
+    color: #fff;
+    font-size: 1rem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #007bff;
+}
+
+.navbar .icon {
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navbar .btn {
+    font-size: 0.9rem;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+.navbar .btn:hover {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+/* Mobile adjustments */
+.navbar-toggler {
+    border: 1px solid #fff;
+}
+
+.navbar-toggler-icon {
+    color: #fff;
+}
+
+
+
+/* End of NavBar */
+
+
