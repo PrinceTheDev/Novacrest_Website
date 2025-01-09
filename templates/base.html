@@ -139,9 +139,75 @@
     
     {% endblock  %}
     
-    {% block footer %}
+    <div class="container-fluid bg-black text-white">
+        <footer class="py-5">
+            <div class="row">
+                <!-- Branding Section -->
+                <div class="col-12 col-md-3 mb-4">
+                    <h5 class="text-uppercase">
+                        {% comment %}<img src="{% static 'images/logo.png' %}" alt="Novacrest Hospital Logo" class="img-fluid">{% endcomment %}
+                        Novacrest Hospital
+                    </h5>
+                    <p class="text-muted">
+                        Leading the way in expert mental health services, including counseling, rehabilitation, and therapy in Abuja, Nigeria.
+                    </p>
+                </div>
     
-    {% endblock  %}
+                <!-- Important Links -->
+                <div class="col-6 col-md-2 mb-4">
+                    <h5>Important Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="{% url 'home' %}" class="nav-link p-0 text-muted">Home</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="{% url 'about' %}" class="nav-link p-0 text-muted">About Us</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="{% url 'services' %}" class="nav-link p-0 text-muted">Services</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="{% url 'news' %}" class="nav-link p-0 text-muted">News</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="{% url 'contact' %}" class="nav-link p-0 text-muted">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Us -->
+                <div class="col-6 col-md-3 mb-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-telephone"></i> <a href="tel:+2348035318274" class="text-muted">+234 803 531 8274</a></li>
+                        <li class="mb-2"><i class="bi bi-envelope"></i> <a href="mailto:novacrest@novacresthospital.org.ng" class="text-muted">novacrest@novacresthospital.org.ng</a></li>
+                        <li class="mb-2"><i class="bi bi-geo-alt"></i> <a href="#" class="text-muted">Click to view map</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Newsletter Subscription -->
+                <div class="col-md-4 mb-4">
+                    <h5>Subscribe to Our Newsletter</h5>
+                    <p>Stay updated with the latest news and insights from Novacrest Hospital.</p>
+                    <form class="d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+    
+            <!-- Footer Bottom Section -->
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 border-top">
+                <p class="mb-0">© 2011 Novacrest Hospital. All Rights Reserved.</p>
+                <ul class="list-unstyled d-flex mb-0">
+                    <li class="ms-3"><a class="text-white" href="#"><i class="bi bi-twitter fs-4"></i></a></li>
+                    <li class="ms-3"><a class="text-white" href="#"><i class="bi bi-instagram fs-4"></i></a></li>
+                    <li class="ms-3"><a class="text-white" href="#"><i class="bi bi-facebook fs-4"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    
 </body>
 
 </html
