@@ -1,0 +1,12 @@
+.home-hero {
+    background-image: url("{% static 'images/Banner_new.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: left;
+
+}

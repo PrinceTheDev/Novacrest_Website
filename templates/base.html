@@ -20,7 +20,7 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://novacresthospital.org.ng/">
 
-    {% comment %} <link rel="icon" href="{% static 'home/images/favicon.png' %}" type="image/png"> {% endcomment %}
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/png">
 
     <title>Novacrest Hospital | Leading Mental Health Care In Abuja</title>
 
@@ -65,10 +65,9 @@
     <!-- Top of the page -->
     <div class="container-fluid header">
         <div class="logo">
-            {% comment %} <a href="{% url 'home' %}">
-                <img src="{% static '/images/logo.png' %}" alt="Novacrest Hospital Logo">
-            </a> {% endcomment %}
-            <h1>NOVACREST</h1>
+            <a href="{% url 'home' %}">
+                <img src="{% static 'images/logo.png' %}" alt="Novacrest Hospital Logo">
+            </a>
         </div>
 
         <div class="info">
@@ -145,8 +144,7 @@
                 <!-- Branding Section -->
                 <div class="col-12 col-md-3 mb-4">
                     <h5 class="text-uppercase">
-                        {% comment %}<img src="{% static 'images/logo.png' %}" alt="Novacrest Hospital Logo" class="img-fluid">{% endcomment %}
-                        Novacrest Hospital
+                        <img src="{% static 'images/logo.png' %}" alt="Novacrest Hospital Logo" class="img-fluid">
                     </h5>
                     <p class="text-muted">
                         Leading the way in expert mental health services, including counseling, rehabilitation, and therapy in Abuja, Nigeria.

@@ -13,14 +13,19 @@ html, body {
     justify-content: space-between;
     align-items: center;
     background: #fff;
-    padding: 10px;
+    padding: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
     flex: 3;
-    font-size: 1.5em;
+    margin: 0;
     padding-left: 100px;
+}
+
+.logo img {
+    width: 300px;
+    height: auto;
 }
 
 .info {
