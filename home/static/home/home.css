@@ -1,5 +1,5 @@
 .home-hero {
-    background-image: url("{% static 'images/Banner_new.jpg' %}");
+    background-image: url("/static/images/Banner_new.jpg");
     background-size: cover;
     background-position: center;
     height: 400px;
