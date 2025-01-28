@@ -11,8 +11,54 @@
 {% block content %}
     
     <div class="home-hero">
-        <h1>Welcome to Novacrest</h1>
-        <p>Your success starts here</p>
+        <div class="hero-text row">
+            <h3>CARING FOR LIFE</h3>
+            <h1><strong>Leading The Way In <br> Mental Health Excellence</strong></h1>
+            <a class="btn btn-primary col-4" href="{% url 'services' %}">Our Services</a>
+        </div>
+    </div>
+
+    <div class="home-info">
+        <div class="icon-text">
+            <div>
+                <button class="btn btn-primary btn-lg">Book an Appointment <i class="bi bi-calendar-check-fill"></i></button> 
+            </div>
+        </div>
+        <div class="icon-text">
+            <div>
+                <button class="btn btn-primary btn-lg">Get Informative Posts <i class="bi bi-collection-fill"></i></button>
+            </div>
+        </div>
+        <div class="icon-text">
+            <div>
+                <button class="btn btn-primary btn-lg">Reach Out To Us <i class="bi bi-person-rolodex"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="brief row text-center mb-5">
+        <h3 class="col-12">WELCOME TO NOVACREST</h3>
+        <h1 class="col-12">Your Health, Our No.1 Priority</h1>
+        <p class="col-12">
+            At Novacrest Hospital, we are committed to providing exceptional medical care<br> tailored to your needs. 
+            With state-of-the-art facilities and a team of dedicated<br> professionals, 
+            we ensure every patient receives the best possible treatment and <br>support.
+        </p>
+        <a class="col-4 mx-auto" href="{% url 'about' %}">Learn More <i class="bi bi-arrow-right-circle-fill ms-2"></i></a>
+    </div>
+
+
+    <div>
+        <div class="container-fluid home-image row">
+            <div class="col-12">
+                <img src="{% static 'images/Banner_nurse.jpg' %}" alt="Hero Image" class="img-fluid nurse-banner">
+            </div>
+        </div>
+    </div>
+
+    <div class="brief row text-center mb-5">
+        <h3 class="col-12">CAN YOU BELIEVE IN</h3>
+        <h1 class="col-12">OUR SERVICES</h1>
     </div>
     
 
@@ -20,9 +66,7 @@
 
 
 {% block footer %}
-    <div class="footer">
-        <p>&copy; 2024</p>
-    </div>
+    
 {% endblock %}
 
 </body>

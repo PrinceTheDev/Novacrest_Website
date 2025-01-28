@@ -1,7 +1,7 @@
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
-    background: #000000;
+    background: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -71,7 +71,7 @@ html, body {
 /* NavBar */
 
 .navbar {
-    background-color: #000;
+    background-color: #223A66;
     color: #fff;
     padding: 10px 0;
 }
@@ -129,6 +129,7 @@ footer {
     padding-right: 50px;
     justify-content: center;
     align-items: center;
+    margin: 10px;
 }
 
 footer h5 {
