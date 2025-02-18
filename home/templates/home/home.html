@@ -56,10 +56,219 @@
         </div>
     </div>
 
-    <div class="brief row text-center mb-5">
-        <h3 class="col-12">CAN YOU BELIEVE IN</h3>
-        <h1 class="col-12">OUR SERVICES</h1>
+    <div class="container my-5 p-4">
+        <div class="brief row text-center mb-4">
+            <h3 class="col-12">CARE YOU CAN BELIEVE IN</h3>
+            <h1 class="col-12">OUR SERVICES</h1>
+        </div>
+    
+        <div class="row service-section">
+            <!-- Left: Service Selection Boxes -->
+            <div class="col-md-3 d-flex flex-column">
+                <div class="btn-group-vertical w-60 h-100">
+                    <button class="btn btn-outline-primary btn-lg flex-grow-1 d-flex flex-column align-items-center justify-content-center" onclick="showService('toxicology')">
+                        <i class="bi bi-capsule-pill"></i>
+                        Toxicology
+                    </button>
+                    <button class="btn btn-outline-primary btn-lg flex-grow-1 d-flex flex-column align-items-center justify-content-center" onclick="showService('rehabilitation')">
+                        <i class="bi bi-house-heart-fill"></i>
+                        Rehabilitation
+                    </button>
+                    <button class="btn btn-outline-primary btn-lg flex-grow-1 d-flex flex-column align-items-center justify-content-center" onclick="showService('therapyServices')">
+                        <i class="bi bi-chat-heart-fill"></i>
+                        Therapy Services
+                    </button>
+                    <button class="btn btn-outline-primary btn-lg flex-grow-1 d-flex flex-column align-items-center justify-content-center" onclick="showService('clinicalCare')">
+                        <i class="bi bi-clipboard-pulse"></i>
+                        Clinical Care
+                    </button>
+                    <a href="{% url 'services' %}" class="btn btn-outline-secondary btn-lg flex-grow-1 d-flex flex-column align-items-center justify-content-center">
+                        View More
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Middle: Service Description -->
+            <div class="col-md-5">
+                <div id="service-description" class="p-3 bg-light border rounded h-100">
+                    <h3 id="service-title" class="text-center">Toxicology</h3>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul id="service-list-left">
+                                <li>Poison Control</li>
+                                <li>Substance Abuse Treatment</li>
+                                <li>Toxicity Testing</li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul id="service-list-right">
+                                <li>Emergency Detox</li>
+                                <li>Occupational Exposure</li>
+                                <li>Pharmacology Consult</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p id="service-paragraph">
+                        Our toxicology services provide specialized treatment and assessment for poison exposure, substance abuse, and occupational hazards.
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Right: Service Images -->
+            <div class="col-md-4">
+                <div id="service-images" class="text-center">
+                    <img src="{% static 'images/drugs.jpeg' %}" alt="Service Image 1" class="img-fluid mb-2 rounded">
+                    <img src="{% static 'images/labb.jpeg' %}" alt="Service Image 2" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
     </div>
+    
+    
+    <script>
+        function showService(service) {
+            let title = '';
+            let listLeft = [];
+            let listRight = [];
+            let paragraph = '';
+            let images = [];
+    
+            switch(service) {
+                case 'toxicology':
+                    title = 'Toxicology';
+                    listLeft = ['Poison Control', 'Substance Abuse Treatment', 'Toxicity Testing'];
+                    listRight = ['Emergency Detox', 'Occupational Exposure', 'Pharmacology Consult'];
+                    paragraph = 'Our toxicology services provide specialized treatment and assessment for poison exposure, substance abuse, and occupational hazards.';
+                    images = ['{% static "images/drugs.jpeg" %}', '{% static "images/labb.jpeg" %}'];
+                    break;
+                case 'rehabilitation':
+                    title = 'Rehabilitation';
+                    listLeft = ['Physical Therapy', 'Speech Therapy', 'Post-Surgical Recovery'];
+                    listRight = ['Occupational Therapy', 'Addiction Recovery', 'Neurological Rehab'];
+                    paragraph = 'Rehabilitation services help individuals recover from injuries, surgeries, and substance dependence to restore independence.';
+                    images = ['{% static "images/sl2.jpg" %}', '{% static "images/s6.jpg" %}'];
+                    break;
+                case 'therapyServices':
+                    title = 'Therapy Services';
+                    listLeft = ['ICU Monitoring', 'Ventilation Support', 'Cardiac Care'];
+                    listRight = ['Emergency Response', 'Post-Operative Care', 'Sepsis Management'];
+                    paragraph = 'Critical care services provide life-saving treatment for patients in intensive conditions, ensuring rapid response and specialized care.';
+                    images = ['{% static "images/feature.jpg" %}', '{% static "images/blog-3.jpg" %}'];
+                    break;
+                case 'clinicalCare':
+                    title = 'Clinical Care';
+                    listLeft = ['General Checkups', 'Diagnostic Testing', 'Chronic Disease Care'];
+                    listRight = ['Vaccinations', 'Preventive Care', 'Specialist Referrals'];
+                    paragraph = 'Clinical services cover a broad range of medical care, including preventive medicine, diagnosis, and chronic disease management.';
+                    images = ['{% static "images/patient.jpg" %}', '{% static "images/departments-2.jpg" %}'];
+                    break;
+                default:
+                    title = 'toxicology';
+                    listLeft = [];
+                    listRight = [];
+                    paragraph = 'Please select a service to view details.';
+                    images = ['{% static "images/default.jpg" %}', '{% static "images/default.jpg" %}'];
+            }
+    
+            document.getElementById('service-title').innerText = title;
+            document.getElementById('service-list-left').innerHTML = listLeft.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('service-list-right').innerHTML = listRight.map(item => `<li>${item}</li>`).join('');
+            document.getElementById('service-paragraph').innerText = paragraph;
+            document.getElementById('service-images').innerHTML = `
+                <img src="${images[0]}" alt="Service Image 1" class="img-fluid mb-2 rounded">
+                <img src="${images[1]}" alt="Service Image 2" class="img-fluid rounded">
+            `;
+        }
+    </script>
+
+
+    <div class="container my-5 p-4">
+        <div class="brief row text-center mb-4">
+            <h3 class="col-12">ALWAYS CARING</h3>
+            <h1 class="col-12">OUR SPECIALTIES</h1>
+        </div>
+    
+        <div class="row text-center specialties">
+            <div class="col-md-3 mb-4">
+                <div class="specialty-box">
+                    <i class="bi bi-chat-dots-fill"></i>
+                    <h5>Psychotherapy</h5>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="specialty-box">
+                    <i class="bi bi-heart-pulse"></i>
+                    <h5>Behavioral Therapy</h5>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="specialty-box">
+                    <i class="bi bi-people-fill"></i>
+                    <h5>Family Counseling</h5>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="specialty-box">
+                    <i class="bi bi-brain"></i>
+                    <h5>Neuropsychiatry</h5>
+                </div>
+            </div>
+            
+            <div class="col-md-3 mb-4">
+                <div class="specialty-box">
+                    <i class="bi bi-person-lines-fill"></i>
+                    <h5>Case Management</h5>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="specialty-box">
+                    <i class="bi bi-hospital"></i>
+                    <h5>Inpatient Care</h5>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="specialty-box">
+                    <i class="bi bi-mortarboard"></i>
+                    <h5>Educational Therapy</h5>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="specialty-box">
+                    <i class="bi bi-journal-medical"></i>
+                    <h5>Medication Management</h5>
+                </div>
+            </div>
+    
+            <div class="col-md-3 mb-4">
+                <div class="specialty-box">
+                    <i class="bi bi-emoji-smile-fill"></i>
+                    <h5>Stress Management</h5>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="specialty-box">
+                    <i class="bi bi-heart-fill"></i>
+                    <h5>Trauma Counseling</h5>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="specialty-box">
+                    <i class="bi bi-music-note"></i>
+                    <h5>Music Therapy</h5>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="specialty-box">
+                    <i class="bi bi-yin-yang"></i>
+                    <h5>Mindfulness Therapy</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+
     
 
 {% endblock %}

@@ -106,3 +106,65 @@
     margin-left: 100px;
     margin-right: -20px;
 }
+
+
+.service-section {
+    min-height: 80vh;
+}
+.btn-group-vertical .btn {
+    border-radius: 0;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+.btn-group-vertical .btn i {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+#service-images img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+
+
+
+.specialties {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.specialty-box {
+    background: transparent;
+    padding: 40px; /* Keeps the boxes big */
+    border-radius: 8px;
+    border: 4px solid #0d6efd; /* Thicker border with a stronger blue */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 220px; /* Slightly bigger boxes */
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.specialty-box i {
+    font-size: 3.5rem; /* Bigger icons */
+    color: #0d6efd;
+    margin-bottom: 15px;
+}
+
+.specialty-box h5 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.specialty-box:hover {
+    background: rgba(13, 110, 253, 0.2); /* Stronger blue highlight */
+    border-color: #003580; /* Darker border on hover */
+    transform: scale(1.05); /* Slight pop effect */
+}
