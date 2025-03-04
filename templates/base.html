@@ -75,21 +75,21 @@
             <div class="icon-text">
                 <i class="bi bi-telephone-inbound icon"></i>
                 <div class="text">
-                    <p>EMERGENCY</p>
+                    <p><strong>EMERGENCY</strong></p>
                     <p><a href="tel:+2348035318274">(+234) 803 531 8274</a></p>
                 </div>
             </div>
             <div class="icon-text">
                 <i class="bi bi-calendar3 icon"></i>
                 <div class="text">
-                    <p>WORK HOURS</p>
-                    <p>Round The Clock</p>
+                    <p><strong>WORK HOURS</strong></p>
+                    <p><a href="{% url 'contact' %}">Round The Clock</a></p>
                 </div>
             </div>
             <div class="icon-text">
                 <i class="bi bi-geo-alt icon"></i>
                 <div class="text">
-                    <p>LOCATION</p>
+                    <p><strong>LOCATION</strong></p>
                     <p><a href="{% url 'appointment' %}">Make an Appointment</a></p>
                 </div>
             </div>
@@ -128,8 +128,8 @@
                 </ul>
                 
                 <div class="d-flex align-items-center">
-                    <i class="bi bi-search icon me-3"></i>
-                    <a class="btn btn-outline-light" href="{% url 'appointment' %}">Make an Appointment</a>
+                    <a href="{% url 'appointment' %}"><i class="bi bi-search icon me-3"></i></a>
+                    <a class="btn nav-btn rounded-pill" href="{% url 'appointment' %}">Make an Appointment</a>
                 </div>
             </div>
         </div>
@@ -139,7 +139,7 @@
     
     {% endblock  %}
     
-    <div class="container-fluid bg-black text-white">
+    <div class="container-fluid">
         <footer class="py-5">
             <div class="row">
                 <!-- Branding Section -->
@@ -147,7 +147,7 @@
                     <h5 class="text-uppercase">
                         <img src="{% static 'images/logo.png' %}" alt="Novacrest Hospital Logo" class="img-fluid">
                     </h5>
-                    <p class="text-muted">
+                    <p class="text-white">
                         Leading the way in expert mental health services, including counseling, rehabilitation, and therapy in Abuja, Nigeria.
                     </p>
                 </div>
@@ -157,19 +157,19 @@
                     <h5>Important Links</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2">
-                            <a href="{% url 'home' %}" class="nav-link p-0 text-muted">Home</a>
+                            <a href="{% url 'home' %}" class="nav-link p-0">Home</a>
                         </li>
                         <li class="nav-item mb-2">
-                            <a href="{% url 'about' %}" class="nav-link p-0 text-muted">About Us</a>
+                            <a href="{% url 'about' %}" class="nav-link p-0">About Us</a>
                         </li>
                         <li class="nav-item mb-2">
-                            <a href="{% url 'services' %}" class="nav-link p-0 text-muted">Services</a>
+                            <a href="{% url 'services' %}" class="nav-link p-0">Services</a>
                         </li>
                         <li class="nav-item mb-2">
-                            <a href="{% url 'news' %}" class="nav-link p-0 text-muted">News</a>
+                            <a href="{% url 'news' %}" class="nav-link p-0">News</a>
                         </li>
                         <li class="nav-item mb-2">
-                            <a href="{% url 'contact' %}" class="nav-link p-0 text-muted">Contact</a>
+                            <a href="{% url 'contact' %}" class="nav-link p-0">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -178,9 +178,9 @@
                 <div class="col-6 col-md-3 mb-4">
                     <h5>Contact Us</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><i class="bi bi-telephone"></i> <a href="tel:+2348035318274" class="text-muted">+234 803 531 8274</a></li>
-                        <li class="mb-2"><i class="bi bi-envelope"></i> <a href="mailto:novacrest@novacresthospital.org.ng" class="text-muted">novacrest@novacresthospital.org.ng</a></li>
-                        <li class="mb-2"><i class="bi bi-geo-alt"></i> <a href="#" class="text-muted">Click to view map</a></li>
+                        <li class="mb-2"><i class="bi bi-telephone"></i> <a href="tel:+2348035318274">+234 803 531 8274</a></li>
+                        <li class="mb-2"><i class="bi bi-envelope"></i> <a href="mailto:novacrest@novacresthospital.org.ng">novacrest@novacresthospital.org.ng</a></li>
+                        <li class="mb-2"><i class="bi bi-geo-alt"></i> <a href="#">Click to view map</a></li>
                     </ul>
                 </div>
     

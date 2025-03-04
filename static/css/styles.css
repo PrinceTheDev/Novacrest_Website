@@ -1,6 +1,6 @@
 html, body {
     height: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     background: #ffffff;
     margin: 0;
     padding: 0;
@@ -44,7 +44,7 @@ html, body {
 
 .icon {
     font-size: 2rem;
-    color: #000;
+    color: #223A66;
 }
 
 .text {
@@ -55,15 +55,18 @@ html, body {
     margin: 0;
     font-size: 0.9rem;
     text-align: left;
+    color: #223A66;
 }
 
 .text a {
     text-decoration: none;
-    color: #007bff;
+    color: #30db19;
+    
 }
 
 .text a:hover {
     text-decoration: underline;
+    color: #1ab006;
 }
 
 /* End of Header */
@@ -84,7 +87,7 @@ html, body {
 }
 
 .navbar .nav-link:hover {
-    color: #007bff;
+    color: #BFD2F8;
 }
 
 .navbar .icon {
@@ -106,6 +109,11 @@ html, body {
     color: #fff;
 }
 
+.navbar .nav-btn {
+    background-color: #BFD2F8;
+    border-radius: 15%;
+}
+
 /* Mobile adjustments */
 .navbar-toggler {
     border: 1px solid #fff;
@@ -123,13 +131,13 @@ html, body {
 
 /* Footer Styling */
 footer {
-    background-color: #000;
+    background-color: #223A66;
     color: #fff;
     padding-left: 50px;
     padding-right: 50px;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    width: 100%;
 }
 
 footer h5 {
@@ -140,7 +148,7 @@ footer h5 {
 
 footer a {
     text-decoration: none;
-    color: #bbb;
+    color: #fff;
 }
 
 footer a:hover {

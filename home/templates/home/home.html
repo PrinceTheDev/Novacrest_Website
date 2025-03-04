@@ -9,111 +9,126 @@
 {% comment %} {% block title %}Home{% endblock %} {% endcomment %}
 
 {% block content %}
-    
+    <!-- Home Page Content -->
     <div class="home-hero">
         <div class="hero-text row">
-            <h3>CARING FOR LIFE</h3>
+            <h3><strong>CARING FOR LIFE</strong></h3>
             <h1><strong>Leading The Way In <br> Mental Health Excellence</strong></h1>
-            <a class="btn btn-primary col-4" href="{% url 'services' %}">Our Services</a>
+            <a class="btn home-btn rounded-pill col-4" href="{% url 'services' %}">Our Services</a>
         </div>
     </div>
+    <!-- End Of Home Page Content -->
 
+    <!-- Home cards -->
     <div class="home-info">
         <div class="icon-text">
             <div>
-                <button class="btn btn-primary btn-lg">Book an Appointment <i class="bi bi-calendar-check-fill"></i></button> 
+                <button class="btn book-btn rounded btn-lg"><a href="{% url 'appointment' %}">Book an Appointment</a> <i class="bi bi-calendar-check-fill"></i></button> 
             </div>
         </div>
         <div class="icon-text">
             <div>
-                <button class="btn btn-primary btn-lg">Get Informative Posts <i class="bi bi-collection-fill"></i></button>
+                <button class="btn info-btn rounded btn-lg"><a href="{% url 'news' %}">Get Informative Posts</a> <i class="bi bi-collection-fill"></i></button>
             </div>
         </div>
         <div class="icon-text">
             <div>
-                <button class="btn btn-primary btn-lg">Reach Out To Us <i class="bi bi-person-rolodex"></i></button>
+                <button class="btn reach-btn rounded btn-lg"><a href="{% url 'contact' %}">Reach Out To Us</a> <i class="bi bi-person-rolodex"></i></button>
             </div>
         </div>
     </div>
+    <!-- End of Home Cards -->
 
+    <!-- Brief About Us -->
     <div class="brief row text-center mb-5">
         <h3 class="col-12">WELCOME TO NOVACREST</h3>
         <h1 class="col-12">Your Health, Our No.1 Priority</h1>
         <p class="col-12">
-            At Novacrest Hospital, we are committed to providing exceptional medical care<br> tailored to your needs. 
-            With state-of-the-art facilities and a team of dedicated<br> professionals, 
-            we ensure every patient receives the best possible treatment and <br>support.
+            At Novacrest Hospital, we are dedicated to providing exceptional medical care tailored to your needs.
+            Renowned for our high ethical standards, unwavering<br> professionalism and compassion in patient management, 
+            we hold our heads high as the leading private mental health hospital in Nigeria.<br>
+            Our state-of-the-art facilities and team of dedicated professionals ensure that every patient receives the 
+            best possible treatment<br> and support. With a firm belief in the sanctity of life, we treat everyone equally, 
+            regardless of religion, ethnicity, gender, <br>nationality, or social status — putting the fear of God first in all our dealings.
         </p>
-        <a class="col-4 mx-auto" href="{% url 'about' %}">Learn More <i class="bi bi-arrow-right-circle-fill ms-2"></i></a>
+        <a class="col-4 mx-auto" href="{% url 'about' %}"><strong>Learn More</strong> <i class="bi bi-arrow-right-circle-fill ms-2"></i></a>
     </div>
 
+    <!-- Mid Banner Image-->
 
     <div>
         <div class="container-fluid home-image row">
             <div class="col-12">
-                <img src="{% static 'images/Banner_nurse.jpg' %}" alt="Hero Image" class="img-fluid nurse-banner">
+                <img src="{% static 'images/happy-banner.jpg' %}" alt="Hero Image" class="img-fluid happy-banner">
             </div>
         </div>
     </div>
 
-    <div class="container my-5 p-4">
-        <div class="brief row text-center mb-4">
+    <!-- End Of Brief About Us -->
+
+
+    <!-- Home Services Section -->
+    <div class="container home-service my-1 p-4">
+        <div class="brief service-head row text-center">
             <h3 class="col-12">CARE YOU CAN BELIEVE IN</h3>
             <h1 class="col-12">OUR SERVICES</h1>
         </div>
     
         <div class="row service-section">
             <!-- Left: Service Selection Boxes -->
-            <div class="col-md-3 d-flex flex-column">
-                <div class="btn-group-vertical w-60 h-100">
-                    <button class="btn btn-outline-primary btn-lg flex-grow-1 d-flex flex-column align-items-center justify-content-center" onclick="showService('toxicology')">
+            <div class="col-md-2 d-flex flex-column rounded-5">
+                <div class="btn-group-vertical">
+                    <button class="btn home-serv-btn btn-lg flex-grow-1 d-flex flex-column align-items-center justify-content-center" onclick="showService('toxicology')" id="toxicology-btn">
                         <i class="bi bi-capsule-pill"></i>
-                        Toxicology
+                        <p>Toxicology</p>
                     </button>
-                    <button class="btn btn-outline-primary btn-lg flex-grow-1 d-flex flex-column align-items-center justify-content-center" onclick="showService('rehabilitation')">
+                    <button class="btn home-serv-btn btn-lg flex-grow-1 d-flex flex-column align-items-center justify-content-center" onclick="showService('rehabilitation')" id="rehabilitation-btn">
                         <i class="bi bi-house-heart-fill"></i>
-                        Rehabilitation
+                        <p>Rehabilitation</p>
                     </button>
-                    <button class="btn btn-outline-primary btn-lg flex-grow-1 d-flex flex-column align-items-center justify-content-center" onclick="showService('therapyServices')">
+                    <button class="btn home-serv-btn btn-lg flex-grow-1 d-flex flex-column align-items-center justify-content-center" onclick="showService('therapyServices')" id="therapyServices-btn">
                         <i class="bi bi-chat-heart-fill"></i>
-                        Therapy Services
+                        <p>Therapy Services</p>
                     </button>
-                    <button class="btn btn-outline-primary btn-lg flex-grow-1 d-flex flex-column align-items-center justify-content-center" onclick="showService('clinicalCare')">
+                    <button class="btn home-serv-btn btn-lg flex-grow-1 d-flex flex-column align-items-center justify-content-center" onclick="showService('clinicalCare')" id="clinicalCare-btn">
                         <i class="bi bi-clipboard-pulse"></i>
-                        Clinical Care
+                        <p>Clinical Care</p>
                     </button>
-                    <a href="{% url 'services' %}" class="btn btn-outline-secondary btn-lg flex-grow-1 d-flex flex-column align-items-center justify-content-center">
-                        View More
+                    <a href="{% url 'services' %}" class="btn home-view-btn btn-lg flex-grow-1 flex-column">
+                        <p>View More</p>
                     </a>
                 </div>
             </div>
-    
+
             <!-- Middle: Service Description -->
-            <div class="col-md-5">
-                <div id="service-description" class="p-3 bg-light border rounded h-100">
-                    <h3 id="service-title" class="text-center">Toxicology</h3>
+            <div class="col-md-6">
+                <div id="service-description" class="p-3 rounded h-100">
+                    <h3 id="service-title" class="text-center">Mental Detox For Renewed Health</h3>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-6 mb-3">
                             <ul id="service-list-left">
-                                <li>Poison Control</li>
-                                <li>Substance Abuse Treatment</li>
-                                <li>Toxicity Testing</li>
+                                <li><em><i class="bi bi-record-fill mx-2"></i>Poison Control</em></li>
+                                <li><em><i class="bi bi-record-fill mx-2"></i>Substance Abuse Treatment</em></li>
+                                <li><em><i class="bi bi-record-fill mx-2"></i>Toxicity Testing</em></li>
                             </ul>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 mb-3">
                             <ul id="service-list-right">
-                                <li>Emergency Detox</li>
-                                <li>Occupational Exposure</li>
-                                <li>Pharmacology Consult</li>
+                                <li><em><i class="bi bi-record-fill mx-2"></i>Emergency Detox</em></li>
+                                <li><em><i class="bi bi-record-fill mx-2"></i>Exposure</em></li>
+                                <li><em><i class="bi bi-record-fill mx-2"></i>Pharmacology Consult</em></li>
                             </ul>
                         </div>
                     </div>
-                    <p id="service-paragraph">
-                        Our toxicology services provide specialized treatment and assessment for poison exposure, substance abuse, and occupational hazards.
+                    <p id="service-paragraph" class="p-3">
+                        Our Toxicology Services provide expert care for individuals exposed to harmful substances, including medication misuse, environmental chemicals, and substance dependence. 
+                        We offer thorough assessment, emergency detox, and treatment to ensure swift and effective recovery.<br><br>
+                        With a focus on both physical and emotional well-being, our team combines medical care with counseling support.
+                        We are dedicated to guiding patients through recovery while promoting a healthier, toxin-free lifestyle.
                     </p>
                 </div>
             </div>
-    
+
             <!-- Right: Service Images -->
             <div class="col-md-4">
                 <div id="service-images" class="text-center">
@@ -122,66 +137,100 @@
                 </div>
             </div>
         </div>
-    </div>
-    
-    
-    <script>
-        function showService(service) {
-            let title = '';
-            let listLeft = [];
-            let listRight = [];
-            let paragraph = '';
-            let images = [];
-    
-            switch(service) {
-                case 'toxicology':
-                    title = 'Toxicology';
-                    listLeft = ['Poison Control', 'Substance Abuse Treatment', 'Toxicity Testing'];
-                    listRight = ['Emergency Detox', 'Occupational Exposure', 'Pharmacology Consult'];
-                    paragraph = 'Our toxicology services provide specialized treatment and assessment for poison exposure, substance abuse, and occupational hazards.';
-                    images = ['{% static "images/drugs.jpeg" %}', '{% static "images/labb.jpeg" %}'];
-                    break;
-                case 'rehabilitation':
-                    title = 'Rehabilitation';
-                    listLeft = ['Physical Therapy', 'Speech Therapy', 'Post-Surgical Recovery'];
-                    listRight = ['Occupational Therapy', 'Addiction Recovery', 'Neurological Rehab'];
-                    paragraph = 'Rehabilitation services help individuals recover from injuries, surgeries, and substance dependence to restore independence.';
-                    images = ['{% static "images/sl2.jpg" %}', '{% static "images/s6.jpg" %}'];
-                    break;
-                case 'therapyServices':
-                    title = 'Therapy Services';
-                    listLeft = ['ICU Monitoring', 'Ventilation Support', 'Cardiac Care'];
-                    listRight = ['Emergency Response', 'Post-Operative Care', 'Sepsis Management'];
-                    paragraph = 'Critical care services provide life-saving treatment for patients in intensive conditions, ensuring rapid response and specialized care.';
-                    images = ['{% static "images/feature.jpg" %}', '{% static "images/blog-3.jpg" %}'];
-                    break;
-                case 'clinicalCare':
-                    title = 'Clinical Care';
-                    listLeft = ['General Checkups', 'Diagnostic Testing', 'Chronic Disease Care'];
-                    listRight = ['Vaccinations', 'Preventive Care', 'Specialist Referrals'];
-                    paragraph = 'Clinical services cover a broad range of medical care, including preventive medicine, diagnosis, and chronic disease management.';
-                    images = ['{% static "images/patient.jpg" %}', '{% static "images/departments-2.jpg" %}'];
-                    break;
-                default:
-                    title = 'toxicology';
-                    listLeft = [];
-                    listRight = [];
-                    paragraph = 'Please select a service to view details.';
-                    images = ['{% static "images/default.jpg" %}', '{% static "images/default.jpg" %}'];
+
+        <!-- End Of Home Services Section -->
+
+        <script>
+            const services = {
+                toxicology: {
+                    title: 'Mental Detox For Renewed Health',
+                    listLeft: [
+                        'Poison Control',
+                        'Substance Abuse Treatment',
+                        'Toxicity Testing'
+                    ],
+                    listRight: [
+                        'Emergency Detox',
+                        'Exposure',
+                        'Pharmacology Consult'
+                    ],
+                    paragraph: 'Our Toxicology Services provide expert care for individuals exposed to harmful substances, including medication misuse, environmental chemicals, and substance dependence. We offer thorough assessment, emergency detox, and treatment to ensure swift and effective recovery. <br><br> With a focus on both physical and emotional well-being, our team combines medical care with counseling support. We are dedicated to guiding patients through recovery while promoting a healthier, toxin-free lifestyle.',
+                    images: [
+                        '{% static "images/drugs.jpeg" %}',
+                        '{% static "images/labb.jpeg" %}'
+                    ]
+                },
+                rehabilitation: {
+                    title: 'A Passion For Putting Patients First',
+                    listLeft: [
+                        'Expert team',
+                        'Always caring',
+                        'Holistic recovery'
+                    ],
+                    listRight: [
+                        '5 star care',
+                        'Personlaized care',
+                        'Compassionate support'
+                    ],
+                    paragraph: 'Our Rehabilitation Services at Novacrest Hospital are designed to support individuals in their journey toward recovery and improved quality of life. We provide personalized care plans for physical, emotional, and mental health rehabilitation, helping patients regain strength, independence, and confidence. Our team of specialists works closely with each patient to ensure a holistic approach to healing.<br><br>Whether recovering from substance dependence, injury, or surgery, we offer comprehensive therapies including physical, occupational, and addiction recovery services. With a compassionate environment and expert guidance, we are committed to restoring your well-being and empowering you to embrace a healthier future.',
+                    images: [
+                        '{% static "images/s6.jpg" %}',
+                        '{% static "images/s5.jpg" %}'
+                    ]
+                },
+                therapyServices: {
+                    title: 'Guiding You to a Healthier Tomorrow',
+                    listLeft: [
+                        'Personalized sessions',
+                        'Emotional support',
+                        'Family therapy'
+                    ],
+                    listRight: [
+                        'Group counselling',
+                        'Holistic approach',
+                        'Professional guidance'
+                    ],
+                    paragraph: 'Our Therapy Services provide personalized mental health support, helping individuals navigate emotional challenges and improve their overall well-being. With a team of experienced therapists, we offer a range of therapeutic approaches, including individual counseling, family therapy, and group sessions. Each session is designed to foster healing, promote self-awareness, and empower clients to achieve emotional balance. <br><br>Whether managing anxiety, depression, or life transitions, our compassionate professionals are dedicated to creating a safe and supportive environment where every client feels heard and valued.',
+                    images: [
+                        '{% static "images/sl1.jpg" %}',
+                        '{% static "images/sl2.jpg" %}'
+                    ]
+                },
+                clinicalCare: {
+                    title: 'Your Health, Our No.1 Priority',
+                    listLeft: [
+                        'Medical Consultations',
+                        'Diagnostic Excellence',
+                        'Medication Management'
+                    ],
+                    listRight: [
+                        'Personalized Checkups',
+                        'Preventive Health Plans',
+                        'Specialist Referrals'
+                    ],
+                    paragraph: 'Our Clinical Services at Novacrest Hospital offer comprehensive medical care designed to meet each patient\'s unique health needs. From routine checkups to managing chronic illnesses, our experienced team provides personalized care to promote overall well-being. We combine advanced diagnostics with a patient-centered approach to ensure early detection and effective treatment.<br><br> With a focus on preventive health and long-term wellness, we empower our patients to take charge of their health journey. Whether it\'s a simple consultation or ongoing medical management, Novacrest Hospital is dedicated to delivering quality care with compassion and expertise.',
+                    images: [
+                        '{% static "images/rehab.jpeg" %}',
+                        '{% static "images/patient.jpg" %}'
+                    ]
+                }
+            };
+
+            function showService(service) {
+                const selectedService = services[service];
+                document.getElementById('service-title').innerText = selectedService.title;
+                document.getElementById('service-list-left').innerHTML = selectedService.listLeft.map(item => `<li><em><i class="bi bi-arrow-right-circle-fill mx-2"></i>${item}</em></li>`).join('');
+                document.getElementById('service-list-right').innerHTML = selectedService.listRight.map(item => `<li><em><i class="bi bi-arrow-right-circle-fill mx-2"></i>${item}</em></li>`).join('');
+                document.getElementById('service-paragraph').innerHTML = selectedService.paragraph;
+                document.getElementById('service-images').innerHTML = `
+                    <img src="${selectedService.images[0]}" alt="Service Image 1" class="img-fluid mb-2 rounded">
+                    <img src="${selectedService.images[1]}" alt="Service Image 2" class="img-fluid rounded">
+                `;
             }
-    
-            document.getElementById('service-title').innerText = title;
-            document.getElementById('service-list-left').innerHTML = listLeft.map(item => `<li>${item}</li>`).join('');
-            document.getElementById('service-list-right').innerHTML = listRight.map(item => `<li>${item}</li>`).join('');
-            document.getElementById('service-paragraph').innerText = paragraph;
-            document.getElementById('service-images').innerHTML = `
-                <img src="${images[0]}" alt="Service Image 1" class="img-fluid mb-2 rounded">
-                <img src="${images[1]}" alt="Service Image 2" class="img-fluid rounded">
-            `;
-        }
-    </script>
+        </script>
 
 
+    <!--Home Specialties section-->
     <div class="container my-5 p-4">
         <div class="brief row text-center mb-4">
             <h3 class="col-12">ALWAYS CARING</h3>
@@ -209,7 +258,7 @@
             </div>
             <div class="col-md-3 mb-4">
                 <div class="specialty-box">
-                    <i class="bi bi-brain"></i>
+                    <i class="bi bi-cloud-haze2"></i>
                     <h5>Neuropsychiatry</h5>
                 </div>
             </div>
@@ -266,7 +315,238 @@
         </div>
     </div>
     
+     <!--End of Home Specialties section-->
+
+
+    <!-- Home Appointment Section -->
+
+    <div class="appointment-section">
+        <div class="row justify-content-center">
+            <!-- Left: Heading and Paragraph -->
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center text-center">
+                <h3><strong>Book an Appointment</strong></h3>
+                <p class="lead">
+                    <strong>
+                    Your mental health is our priority. Schedule an appointment with our experienced and caring professionals to receive personalized care tailored to your needs.
+                     Whether you&apos;re seeking therapy, rehabilitation, or a simple consultation, we&apos;re here to support you every step of the way.
+                     Take the first step toward a healthier, happier you—book your appointment today.
+                    </strong>
+                </p>
+            </div>
     
+            <!-- Right: Appointment Form -->
+            <div class="col-md-6">
+                <div class="appointment-form p-3">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                          <label for="name">Full Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="gender">Gender</label>
+                                <select class="form-control" id="gender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="date">Appointment Date</label>
+                                <input type="date" class="form-control" id="date">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="time">Appointment Time</label>
+                                <input type="time" class="form-control" id="time">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="title">Title</label>
+                                <input type="text" class="form-control" id="title" placeholder="Your title">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="department">Department</label>
+                                <select class="form-control" id="department">
+                                    <option>Toxicology</option>
+                                    <option>Rehabilitation</option>
+                                    <option>Critical Care</option>
+                                    <option>Clinical Services</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="message">Additional Message</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Any specific requests?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Submit Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Of Home Appointment Section -->
+    
+    <!-- Home Team Section -->
+    <div class="container my-5 p-4">
+        <div class="brief row text-center mb-4">
+            <h3 class="col-12">MEET OUR TEAM</h3>
+            <h1 class="col-12">Our Dedicated Professionals</h1>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/team-2.jpg' %}" class="card-img-top" alt="Team Member 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. John Doe</h5>
+                        <p class="card-text">Chief Medical Officer</p>
+                        <p class="card-text">Dr. John Doe has over 20 years of experience in mental health care and is dedicated to providing the best care for our patients.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/team-2.jpg' %}" class="card-img-top" alt="Team Member 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Jane Smith</h5>
+                        <p class="card-text">Head of Therapy Services</p>
+                        <p class="card-text">Dr. Jane Smith specializes in cognitive behavioral therapy and has been a part of our team for 10 years.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static 'images/team-2.jpg' %}" class="card-img-top" alt="Team Member 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Dr. Emily Johnson</h5>
+                        <p class="card-text">Senior Psychiatrist</p>
+                        <p class="card-text">Dr. Emily Johnson is known for her compassionate approach and expertise in treating a wide range of mental health conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Of Home Team Section -->
+
+    <!-- Home Blog Section -->
+<div class="container my-5 p-4 blog-section">
+    <div class="brief text-center mb-4">
+        <h3 class="text-uppercase">Latest From Our Blog</h3>
+        <h1>Recent Posts</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="blog-card mb-4 d-flex">
+                <img src="{% static 'images/sl1.jpg' %}" class="blog-image" alt="Blog Image 1">
+                <div class="blog-content">
+                    <p class="blog-date">Monday 24th, September 2023 | By Dr Uchendu</p>
+                    <h5 class="blog-title">Understanding Mental Health</h5>
+                </div>
+            </div>
+            <div class="blog-card d-flex">
+                <img src="{% static 'images/smoke.jpeg' %}" class="blog-image" alt="Blog Image 3">
+                <div class="blog-content">
+                    <p class="blog-date">Wednesday 10th, March 2023 | By Dr. Emily</p>
+                    <h5 class="blog-title">The Importance of Therapy</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="blog-card mb-4 d-flex">
+                <img src="{% static 'images/sl2.jpg' %}" class="blog-image" alt="Blog Image 2">
+                <div class="blog-content">
+                    <p class="blog-date">Thursday 15th, February 2023 | By Dr. Jane</p>
+                    <h5 class="blog-title">Tips for Stress Management</h5>
+                </div>
+            </div>
+            <div class="blog-card d-flex">
+                <img src="{% static 'images/spiritual.jpeg' %}" class="blog-image" alt="Blog Image 4">
+                <div class="blog-content">
+                    <p class="blog-date">Friday 5th, April 2023 | By Admin</p>
+                    <h5 class="blog-title">Healthy Living Tips</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Of Home Blog Section -->
+
+        
+
+<!-- Contact Section -->
+<div class="container my-5 p-4">
+    <div class="brief row text-center mb-4">
+        <h3 class="col-12">GET IN TOUCH</h3>
+        <h1 class="col-12">Contact</h1>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-3 mb-4">
+            <a href="/appointment/" class="text-decoration-none text-dark">
+                <div class="card p-4 h-100 shadow">
+                    <div class="card-body">
+                        <i class="bi bi-telephone-fill fs-2 text-primary"></i>
+                        <h5 class="card-title mt-3">Emergency</h5>
+                        <p class="card-text">+234 812 345 6789<br>+234 809 876 5432</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <a href="/contact/" class="text-decoration-none text-dark">
+                <div class="card p-4 h-100 shadow">
+                    <div class="card-body">
+                        <i class="bi bi-geo-alt-fill fs-2 text-primary"></i>
+                        <h5 class="card-title mt-3">Location</h5>
+                        <p class="card-text">123 Main Street, Novacity, Lagos</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <a href="/contact/" class="text-decoration-none text-dark">
+                <div class="card p-4 h-100 shadow">
+                    <div class="card-body">
+                        <i class="bi bi-envelope-fill fs-2 text-primary"></i>
+                        <h5 class="card-title mt-3">Email</h5>
+                        <p class="card-text">info@novacresthospital.com</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <a href="/contact/" class="text-decoration-none text-dark">
+                <div class="card p-4 h-100 shadow">
+                    <div class="card-body">
+                        <i class="bi bi-clock-fill fs-2 text-primary"></i>
+                        <h5 class="card-title mt-3">Working Hours</h5>
+                        <p class="card-text">Mon - Fri: 8am - 6pm<br>Sat: 9am - 2pm</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- End of Contact Section -->
 
 
     
