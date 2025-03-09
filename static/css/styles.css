@@ -129,7 +129,6 @@ html, body {
 
 /* footer */
 
-/* Footer Styling */
 footer {
     background-color: #223A66;
     color: #fff;
@@ -137,7 +136,12 @@ footer {
     padding-right: 50px;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100vw;
+    display: block;
+    margin-left: calc(-50vw + 50%); /* Remove margins */
+    margin-right: calc(-50vw + 50%); /* Remove margins */
+    box-sizing: border-box; 
+
 }
 
 footer h5 {
@@ -156,13 +160,21 @@ footer a:hover {
     text-decoration: underline;
 }
 
+footer .nav-link {
+    color: #BFD2F8;
+}
+
+footer i {
+    color: #BFD2F8;
+}
+
 footer .bi {
     font-size: 1.2rem;
     vertical-align: middle;
 }
 
 footer .btn {
-    background-color: #007bff;
+    background-color: #BFD2F8;
     border: none;
 }
 

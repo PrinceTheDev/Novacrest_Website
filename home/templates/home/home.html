@@ -409,32 +409,32 @@
 
         <div class="row text-center">
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card doc-card">
                     <img src="{% static 'images/team-2.jpg' %}" class="card-img-top" alt="Team Member 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Dr. John Doe</h5>
-                        <p class="card-text">Chief Medical Officer</p>
-                        <p class="card-text">Dr. John Doe has over 20 years of experience in mental health care and is dedicated to providing the best care for our patients.</p>
+                    <div class="card-body doc-card-body">
+                        <h5 class="card-title doc-card-title">Dr. John Doe</h5>
+                        <p class="card-text doc-card-text">Chief Medical Officer</p>
+                        <p class="card-text doc-card-text">Dr. John Doe has over 20 years of experience in mental health care and is dedicated to providing the best care for our patients.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card doc-card">
                     <img src="{% static 'images/team-2.jpg' %}" class="card-img-top" alt="Team Member 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Dr. Jane Smith</h5>
-                        <p class="card-text">Head of Therapy Services</p>
-                        <p class="card-text">Dr. Jane Smith specializes in cognitive behavioral therapy and has been a part of our team for 10 years.</p>
+                    <div class="card-body doc-card-body">
+                        <h5 class="card-title doc-card-title">Dr. Jane Smith</h5>
+                        <p class="card-text doc-card-text">Head of Therapy Services</p>
+                        <p class="card-text doc-card-text">Dr. Jane Smith specializes in cognitive behavioral therapy and has been a part of our team for 10 years.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card doc-card">
                     <img src="{% static 'images/team-2.jpg' %}" class="card-img-top" alt="Team Member 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Dr. Emily Johnson</h5>
-                        <p class="card-text">Senior Psychiatrist</p>
-                        <p class="card-text">Dr. Emily Johnson is known for her compassionate approach and expertise in treating a wide range of mental health conditions.</p>
+                    <div class="card-body doc-card-body">
+                        <h5 class="card-title doc-card-title">Dr. Emily Johnson</h5>
+                        <p class="card-text doc-card-text">Senior Psychiatrist</p>
+                        <p class="card-text doc-card-text">Dr. Emily Johnson is known for her compassionate approach and expertise in treating a wide range of mental health conditions.</p>
                     </div>
                 </div>
             </div>
@@ -498,23 +498,23 @@
 
     <div class="row text-center">
         <div class="col-md-3 mb-4">
-            <a href="/appointment/" class="text-decoration-none text-dark">
-                <div class="card p-4 h-100 shadow">
-                    <div class="card-body">
-                        <i class="bi bi-telephone-fill fs-2 text-primary"></i>
-                        <h5 class="card-title mt-3">Emergency</h5>
-                        <p class="card-text">+234 812 345 6789<br>+234 809 876 5432</p>
+            <a href="{% url 'appointment' %}" class="text-decoration-none">
+                <div class="card contact-card p-4 h-100 shadow custom-bg ">
+                    <div class="card-body contact-body">
+                        <i class="bi bi-telephone-outbound fs-2"></i>
+                        <h5 class="card-title mt-3"><strong>EMERGENCY</strong></h5>
+                        <p class="card-text">(+234) 803 531 8274<br>(+234) 123 456 7890</p>
                     </div>
                 </div>
             </a>
         </div>
 
         <div class="col-md-3 mb-4">
-            <a href="/contact/" class="text-decoration-none text-dark">
-                <div class="card p-4 h-100 shadow">
-                    <div class="card-body">
-                        <i class="bi bi-geo-alt-fill fs-2 text-primary"></i>
-                        <h5 class="card-title mt-3">Location</h5>
+            <a href="{% url 'contact' %}" class="text-decoration-none text-dark">
+                <div class="card contact-card-2 p-4 h-100 shadow">
+                    <div class="card-body contact-body">
+                        <i class="bi bi-geo-alt-fill fs-2"></i>
+                        <h5 class="card-title mt-3"><strong>LOCATION</strong></h5>
                         <p class="card-text">123 Main Street, Novacity, Lagos</p>
                     </div>
                 </div>
@@ -522,23 +522,23 @@
         </div>
 
         <div class="col-md-3 mb-4">
-            <a href="/contact/" class="text-decoration-none text-dark">
-                <div class="card p-4 h-100 shadow">
-                    <div class="card-body">
-                        <i class="bi bi-envelope-fill fs-2 text-primary"></i>
-                        <h5 class="card-title mt-3">Email</h5>
-                        <p class="card-text">info@novacresthospital.com</p>
+            <a href="{% url 'contact' %}" class="text-decoration-none text-dark">
+                <div class="card contact-card p-4 h-100 shadow">
+                    <div class="card-body contact-body">
+                        <i class="bi bi-envelope-fill fs-2"></i>
+                        <h5 class="card-title mt-3"><strong>EMAIL</strong></h5>
+                        <p class="card-text">novacresthospital@gmail.com</p>
                     </div>
                 </div>
             </a>
         </div>
 
         <div class="col-md-3 mb-4">
-            <a href="/contact/" class="text-decoration-none text-dark">
-                <div class="card p-4 h-100 shadow">
-                    <div class="card-body">
-                        <i class="bi bi-clock-fill fs-2 text-primary"></i>
-                        <h5 class="card-title mt-3">Working Hours</h5>
+            <a href="{% url 'contact' %}" class="text-decoration-none text-dark">
+                <div class="card contact-card p-4 h-100 shadow">
+                    <div class="card-body contact-body">
+                        <i class="bi bi-clock fs-2"></i>
+                        <h5 class="card-title mt-3"><strong>WORKING HOURS</strong></h5>
                         <p class="card-text">Mon - Fri: 8am - 6pm<br>Sat: 9am - 2pm</p>
                     </div>
                 </div>

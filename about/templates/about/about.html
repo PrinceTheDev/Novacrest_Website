@@ -1,16 +1,23 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'about/about.css' %}">
+{% endblock %}
+
 {% comment %} {% block title %}Home{% endblock %} {% endcomment %}
 
 {% block content %}
-    <div class="container">
-        <div class="header">
-            <h1>About Novacrest Hospital</h1>
-        </div>
-        <div class="content">
-            <p>Let's get to know Novacrest</p>
-        </div>
+
+<!--About Hero Section-->
+<div class="about-hero">
+    <div class="about-hero-text row">
+        <h3>Home / About</h3>
+        <h1><strong>About Us</strong></h1>
     </div>
+</div>
+    
 {% endblock %}
 
 

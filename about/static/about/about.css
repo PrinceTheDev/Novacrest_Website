@@ -1,0 +1,38 @@
+/* About Hero */
+
+.about-hero {
+  background: url("/static/images/hero-banner-8.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.about-hero-text {
+    display: flexbox;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 50%;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 3px;
+}
+
+.about-hero-text h1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 0.5rem;
+    color: #223A66;
+}
+
+.about-hero-text h3 {
+    color: #1AB006;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}

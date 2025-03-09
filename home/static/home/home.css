@@ -443,7 +443,7 @@
 
 
 /* Home team section */
-.card {
+.doc-card {
     border: none;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -451,12 +451,12 @@
     border-radius: 15px;
 }
 
-.card:hover {
+.doc-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 
-.card img {
+.doc-card img {
     height: 350px;
     object-fit: cover;
     border-top-left-radius: 15px;
@@ -464,12 +464,12 @@
     transition: transform 0.3s ease;
 }
 
-.card:hover img {
+.doc-card:hover img {
     transform: scale(1.1);
     filter: brightness(0.8);
 }
 
-.card-body {
+.doc-card-body {
     padding: 30px;
     background: #f9f9f9;
     text-align: center;
@@ -477,14 +477,14 @@
     border-bottom-right-radius: 15px;
 }
 
-.card-title {
+.doc-card-title {
     font-size: 1.4rem;
     font-weight: bold;
     color: #223A66;
     margin-bottom: 10px;
 }
 
-.card-text {
+.doc-card-text {
     font-size: 1rem;
     color: #555;
     line-height: 1.6;
@@ -493,7 +493,7 @@
 /* End of home team section */
 
 @media (max-width: 768px) {
-    .card img {
+    .doc-card img {
         height: 250px;
     }
 
@@ -501,7 +501,7 @@
         font-size: 2rem;
     }
 
-    .card-body {
+    .doc-card-body {
         padding: 20px;
     }
 }
@@ -549,6 +549,51 @@
     font-size: 1.2rem;
     color: #333;
 }
+
+.contact-card {
+    background-color: #BFD2F8 !important; 
+}
+.contact-card i {
+    color: #223A66;
+}
+
+.contact-card h5 {
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    color: #223A66;
+}
+
+.contact-card p {
+    color: #223A66;
+    text-align: left;
+    justify-content: left;
+    align-items: center;
+}
+
+.contact-card-2 {
+    background-color: #223A66 !important; 
+}
+.contact-card-2 i {
+    color: #BFD2F8;
+}
+
+.contact-card-2 h5 {
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    color: #BFD2F8;
+}
+
+.contact-card-2 p {
+    color: #BFD2F8;
+    text-align: left;
+    justify-content: left;
+    align-items: center;
+}
+
+
+
 
 
 .card:hover {
