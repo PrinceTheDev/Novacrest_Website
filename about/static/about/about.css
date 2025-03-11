@@ -1,14 +1,15 @@
 /* About Hero */
 
 .about-hero {
-  background: url("/static/images/hero-banner-8.png");
+  background: url("/static/images/hero-banner-1.png");
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: left;
+  margin-bottom: 50px;
 }
 
 .about-hero-text {
@@ -35,4 +36,549 @@
     color: #1AB006;
     font-family:Arial, Helvetica, sans-serif;
     font-size: 1rem;
+}
+
+
+/* Welcome Section */
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    padding: 50px;
+    margin: 50px;
+    gap: 30px;
+}
+.about-content img {
+    width: 40%;
+    border-radius: 10px;
+    margin-right: 20px;
+    align-self: flex-start;
+    height: 520px;
+
+}
+.about-text {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-text h3 {
+    font-size: 1rem;
+    color: #36c919;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.about-text h1 {
+    font-size: 2.8rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #223A66;
+    text-align: left;
+}
+.about-list {
+    display: flex;
+    justify-content: left;
+    justify-items: left;
+    align-items: left;
+    gap: 30px;
+    max-width: 600px;
+}
+.about-list ul {
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+    justify-content: left;
+    justify-items: left;
+    align-items: left;
+}
+.about-list li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+.about-list li::before {
+    color: #007bff;
+    font-weight: bold;
+    margin-right: 10px;
+    list-style-type: none;
+}
+.about-list i {
+    color: #1AB006;
+    font-size: 1.2rem;
+}
+.about-content p {
+    font-size: 0.9rem;
+    text-align: left;
+    margin-top: -20px ;
+}
+
+
+
+/* mission-vision-values */
+
+.mvv h3 {
+    font-size: 1rem;
+    color: #36c919;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+.mvv h1 {
+    font-size: 2.8rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #223A66;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.card-big-shadow {
+    max-width: 320px;
+    position: relative;
+}
+
+.coloured-cards .card {
+    margin-top: 30px;
+}
+
+.card[data-radius="none"] {
+    border-radius: 0px;
+}
+.card {
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+    background-color: #FFFFFF;
+    color: #252422;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+
+.card[data-background="image"] .title, .card[data-background="image"] .stats, .card[data-background="image"] .category, .card[data-background="image"] .description, .card[data-background="image"] .content, .card[data-background="image"] .card-footer, .card[data-background="image"] small, .card[data-background="image"] .content a, .card[data-background="color"] .title, .card[data-background="color"] .stats, .card[data-background="color"] .category, .card[data-background="color"] .description, .card[data-background="color"] .content, .card[data-background="color"] .card-footer, .card[data-background="color"] small, .card[data-background="color"] .content a {
+    color: #FFFFFF;
+}
+.card.card-just-text .content {
+    padding: 50px 50px;
+    text-align: center;
+}
+.card .content {
+    padding: 20px 20px 20px 20px;
+}
+.card[data-color="blue"] .category {
+    color: #7a9e9f;
+}
+
+.card .category, .card .label {
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+.card-big-shadow:before {
+    background-image: url("http://static.tumblr.com/i21wc39/coTmrkw40/shadow.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    bottom: -12%;
+    content: "";
+    display: block;
+    left: -12%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+h4, .h4 {
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1.2em;
+}
+h6, .h6 {
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.card .description {
+    font-size: 16px;
+    color: #66615b;
+    text-align: left;
+}
+.content-card{
+    margin-top:30px;    
+}
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+/*======== COLORS ===========*/
+.card[data-color="blue"] {
+    background: #223A66;
+}
+.card[data-color="blue"] .description {
+    color: #BFD2F8;
+}
+.card[data-color="blue"] .category {
+    color: #BFD2F8;
+}
+
+.card[data-color="light-blue"] {
+    background: #BFD2F8;
+}
+.card[data-color="light-blue"] .description {
+    color: #223A66;
+}
+.card[data-color="light-blue"] .category {
+    color: #223A66;
+}
+
+.card[data-color="green"] {
+    background: #30DB19;
+}
+.card[data-color="green"] .description {
+    color: #223A66;
+}
+.card[data-color="green"] .category {
+    color: #223A66;
+}
+
+
+/* Section Styling */
+.why-us-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+/* Center Content */
+.section-title {
+    font-size: 1rem;
+    color: #36c919;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.hospital-name {
+    font-size: 2.8rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #223A66;
+    text-align: center;
+}
+
+.why-description {
+    font-size: 0.9rem;
+    text-align: left;
+    margin-top: -20px;
+}
+
+/* Split List into Two Columns */
+.why-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.why-list li {
+    font-size: 1rem;
+    padding: 5px 0;
+    position: relative;
+    list-style-type: none;
+    text-align: left;
+}
+
+.why-list i {
+    color: #1AB006;
+    font-size: 1.2rem;
+}
+
+.why-list li::before {
+    color: #28a745;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Ensure spacing for two-column layout */
+.why-list .col-6 {
+    display: flex;
+    justify-content: center;
+}
+
+/* Summary Text */
+.why-summary {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #223A66;
+    margin-top: 15px;
+}
+
+/* Image Styling */
+.image-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.rounded-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.rounded-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* Testimonial Section */
+
+.testimonial-section {
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    background: url("/static/images/testimonial-bg-2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 240px; /* Ensures enough space for testimonials */
+    display: flex;
+    align-items: center; /* Centers content vertically */
+}
+
+.testimonial-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255, 253, 253, 0.2); /* Semi-transparent overlay */
+    z-index: 1; /* Keeps it behind content */
+}
+
+/* Slider Container */
+.testimonial-slider {
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.testimonial-section-title {
+    font-size: 1rem;
+    color: #36c919;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.testimonial-section h1 {
+    font-size: 2.8rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #223A66;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Track for sliding */
+.testimonial-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scrollTestimonial 60s linear infinite;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    flex: 0 0 300px;
+    height: 250px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15); /* Transparent white */
+    backdrop-filter: blur(10px); /* Glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 2;
+
+}
+
+/* Image Styling */
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #28a745;
+}
+
+/* Name */
+.testimonial-card h4 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+/* Review Text */
+.testimonial-card p {
+    font-size: 0.95rem;
+    color: #666;
+    padding: 0 10px;
+}
+
+/* Stars */
+.stars {
+    font-size: 1.2rem;
+    color: #f4b400;
+}
+
+/* Infinite Scrolling */
+@keyframes scrollTestimonial {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
+
+/* Partners Section */
+.partners-section {
+    padding: 70px 0;
+    text-align: center;
+}
+
+.partners-section-title {
+    font-size: 1rem;
+    color: #36c919;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.partners-section h1 {
+    font-size: 2.8rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #223A66;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Logos Grid */
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spacing between logos */
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Logos Styling */
+.partners-logos img {
+    width: 120px; /* Ensures uniform size */
+    height: 60px; /* Adjust as needed */
+    object-fit: contain; /* Prevents distortion */
+    filter: grayscale(50%); /* Optional: makes logos gray */
+    transition: 0.3s ease-in-out;
+}
+
+.partners-logos img:hover {
+    filter: grayscale(0%); /* Full color on hover */
+}
+
+/* Contact section */
+
+
+.contact-section-title {
+    font-size: 1rem;
+    color: #36c919;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.contact-section h1 {
+    font-size: 2.8rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #223A66;
+    text-align: center;
+    z-index: 2;
+}
+.contact-card {
+    background-color: #BFD2F8 !important; 
+}
+.contact-card i {
+    color: #223A66;
+}
+
+.contact-card h5 {
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    color: #223A66;
+}
+
+.contact-card p {
+    color: #223A66;
+    text-align: left;
+    justify-content: left;
+    align-items: center;
+}
+
+.contact-card-2 {
+    background-color: #223A66 !important; 
+}
+.contact-card-2 i {
+    color: #BFD2F8;
+}
+
+.contact-card-2 h5 {
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    color: #BFD2F8;
+}
+
+.contact-card-2 p {
+    color: #BFD2F8;
+    text-align: left;
+    justify-content: left;
+    align-items: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.card i {
+    display: block;
+    text-align: left;
 }

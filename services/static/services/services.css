@@ -1,0 +1,95 @@
+/* About Hero */
+
+.services-hero {
+    background: url("/static/images/services-hero-1.png");
+    background-size: cover;
+    background-position: center;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.services-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(66, 154, 201, 0.3); /* Adjust the opacity as needed */
+    z-index: 1;
+}
+
+.services-hero-text {
+    position: relative;
+    z-index: 2;
+    display: flexbox;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 50%;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 3px;
+}
+
+.services-hero-text h1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 0.5rem;
+    color: #223A66;
+}
+
+.services-hero-text h3 {
+    color: #1AB006;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+
+
+.services-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.service-card {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.modal-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.modal-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-list ul {
+    list-style: none;
+}

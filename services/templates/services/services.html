@@ -1,16 +1,178 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'services/services.css' %}">
+{% endblock %}
+
 {% comment %} {% block title %}Home{% endblock %} {% endcomment %}
 
 {% block content %}
+
+<!--Services Hero Section-->
+<div class="services-hero">
+    <div class="services-hero-text row">
+        <h3>Home / Services</h3>
+        <h1><strong>Our Services</strong></h1>
+    </div>
+</div>
+
+<!-- Services Section -->
+<div class="services-section">
     <div class="container">
-        <div class="header">
-            <h1>Services</h1>
-        </div>
-        <div class="content">
-            <p>Get to know our services</p>
+        <h3 class="section-title">Our Services</h3>
+        <div class="row">
+            <!-- Service Cards -->
+            <div class="col-md-4">
+                <div class="service-card" data-service="rehabilitation">
+                    <img src="/static/images/rehabilitation.jpg" alt="Rehabilitation">
+                    <h4>Rehabilitation</h4>
+                    <p>Comprehensive care and support to restore optimal health and well-being.</p>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-card" data-service="toxicology">
+                    <img src="/static/images/toxicology.jpg" alt="Toxicology">
+                    <h4>Toxicology</h4>
+                    <p>Advanced testing and analysis for substance-related conditions and exposure.</p>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-card" data-service="therapy">
+                    <img src="/static/images/therapy.jpg" alt="Therapy">
+                    <h4>Therapy</h4>
+                    <p>Personalized therapeutic sessions for mental and emotional well-being.</p>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-card" data-service="medical-service">
+                    <img src="/static/images/medical.jpg" alt="Medical Service">
+                    <h4>Medical Service</h4>
+                    <p>Quality healthcare with expert professionals for all medical needs.</p>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-card" data-service="psycho-education">
+                    <img src="/static/images/psycho-education.jpg" alt="Psycho-Education">
+                    <h4>Psycho-Education</h4>
+                    <p>Helping patients understand mental health and develop coping strategies.</p>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-card" data-service="hospice">
+                    <img src="/static/images/hospice.jpg" alt="Hospice and Palliative Care">
+                    <h4>Hospice & Palliative Care</h4>
+                    <p>Compassionate end-of-life care focusing on comfort and dignity.</p>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-card" data-service="lab-services">
+                    <img src="/static/images/lab.jpg" alt="Lab Services">
+                    <h4>Lab Services</h4>
+                    <p>Advanced diagnostic testing for accurate health assessments.</p>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-card" data-service="nutrition">
+                    <img src="/static/images/nutrition.jpg" alt="Nutrition Counseling">
+                    <h4>Nutrition Counseling</h4>
+                    <p>Expert guidance on diet and nutrition for a healthier lifestyle.</p>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="service-card" data-service="mental-wellness">
+                    <img src="/static/images/mental-wellness.jpg" alt="Mental Wellness Programs">
+                    <h4>Mental Wellness Programs</h4>
+                    <p>Holistic approaches to maintain and improve mental well-being.</p>
+                    <button class="view-more-btn">View More</button>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+
+<!-- Modal Structure -->
+<div id="serviceModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="modalTitle"></h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" class="modal-img">
+                <h3 id="modalHeading"></h3>
+                <h5 id="modalSubheading"></h5>
+                <div class="modal-list">
+                    <ul id="modalList1"></ul>
+                    <ul id="modalList2"></ul>
+                    <ul id="modalList3"></ul>
+                </div>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<script>
+    
+    const servicesData = {
+        rehabilitation: {
+            title: "Rehabilitation",
+            subheading: "Regain Independence & Strength",
+            image: "/static/images/rehabilitation.jpg",
+            points: ["Physical Therapy", "Mental Recovery", "Pain Management", "Speech Therapy", "Occupational Therapy", "Post-Surgical Care"],
+            description: "Our rehabilitation programs help individuals recover from physical and mental conditions, providing personalized treatment plans for optimal recovery."
+        },
+        toxicology: {
+            title: "Toxicology",
+            subheading: "Advanced Testing & Diagnosis",
+            image: "/static/images/toxicology.jpg",
+            points: ["Drug Testing", "Poison Analysis", "Medical Research", "Occupational Health", "Forensic Studies", "Substance Abuse"],
+            description: "We provide cutting-edge toxicology services to assess exposure to chemicals and drugs, ensuring accurate and timely diagnostics."
+        }
+    };
+    
+    document.querySelectorAll(".view-more-btn").forEach(button => {
+        button.addEventListener("click", (event) => {
+            const serviceKey = event.target.closest(".service-card").dataset.service;
+            const service = servicesData[serviceKey];
+    
+            document.getElementById("modalTitle").innerText = service.title;
+            document.getElementById("modalImage").src = service.image;
+            document.getElementById("modalSubheading").innerText = service.subheading;
+            document.getElementById("modalList1").innerHTML = `<li>${service.points[0]}</li><li>${service.points[1]}</li>`;
+            document.getElementById("modalList2").innerHTML = `<li>${service.points[2]}</li><li>${service.points[3]}</li>`;
+            document.getElementById("modalList3").innerHTML = `<li>${service.points[4]}</li><li>${service.points[5]}</li>`;
+            document.getElementById("modalDescription").innerText = service.description;
+        });
+    });
+    
+</script>
+
+
 {% endblock %}
 
 

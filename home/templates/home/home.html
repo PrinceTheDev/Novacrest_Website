@@ -219,8 +219,8 @@
             function showService(service) {
                 const selectedService = services[service];
                 document.getElementById('service-title').innerText = selectedService.title;
-                document.getElementById('service-list-left').innerHTML = selectedService.listLeft.map(item => `<li><em><i class="bi bi-arrow-right-circle-fill mx-2"></i>${item}</em></li>`).join('');
-                document.getElementById('service-list-right').innerHTML = selectedService.listRight.map(item => `<li><em><i class="bi bi-arrow-right-circle-fill mx-2"></i>${item}</em></li>`).join('');
+                document.getElementById('service-list-left').innerHTML = selectedService.listLeft.map(item => `<li><em><i class="bi bi-record-fill mx-2"></i>${item}</em></li>`).join('');
+                document.getElementById('service-list-right').innerHTML = selectedService.listRight.map(item => `<li><em><i class="bi bi-record-fill mx-2"></i>${item}</em></li>`).join('');
                 document.getElementById('service-paragraph').innerHTML = selectedService.paragraph;
                 document.getElementById('service-images').innerHTML = `
                     <img src="${selectedService.images[0]}" alt="Service Image 1" class="img-fluid mb-2 rounded">
